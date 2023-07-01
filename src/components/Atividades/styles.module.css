@@ -9,18 +9,18 @@
     border-radius: 4px;
 }
 .cardAtividade h3 {
-    padding: 0 3%;
-    font-size: 1.4rem;
+    padding: 0 2%;
+    font-size: 0.8rem;
 }
 
 .cardAtividade p {
-    font-size: 1rem;
-    padding: 0 3%;
+    font-size: 0.5rem;
+    padding: 0 2%;
 }
 
 @media (max-width: 767px) {
     .cardAtividade h3, .cardAtividade p {
         padding: 0 1%;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
