@@ -1,0 +1,30 @@
+.Publicacao{
+    padding: 1%;
+    width: 90%;
+    display: flex;
+    border: 1px solid slateblue;
+    flex-direction: column;
+    gap: 1.2rem
+}
+
+.Publicacao img {
+    max-width: 2.2rem;
+    max-height: 2.2rem;
+    border-radius: 50%;
+}
+
+.Publicacao_header {
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Publicacao_profile {
+    width: 40%;
+    gap: 0.5rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+}

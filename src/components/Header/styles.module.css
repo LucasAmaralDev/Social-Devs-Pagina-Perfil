@@ -1,0 +1,25 @@
+.header {
+    background-color: rgb(231, 207, 198);
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    border:1px solid black;
+}
+
+.header ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.container {
+    padding: 0 4vh;
+}
+
+.header ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+

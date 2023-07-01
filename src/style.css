@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    display: flex;
+}
+
+.left-bar{
+    width: 21%;
+}
+
+nav {
+    position: fixed;
+    margin-top: 5vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red
+}
+
+.informacoes-pessoais{
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.8rem;
+}
+
+.main-right{
+    width: 80%;
+    margin-top: 5vh;
+}
+
+.atividades{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99.75%;
+    border: 2px solid green;
+}
+
+.publicacoes {
+    border: 2px solid cadetblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

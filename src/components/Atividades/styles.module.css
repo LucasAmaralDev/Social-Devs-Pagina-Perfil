@@ -1,0 +1,13 @@
+.cardAtividade{
+    color: blue;
+    border: 2px solid red;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.cardAtividade h3, .cardAtividade p {
+    padding: 0 3%;
+    font-size: 1.4rem;
+}
