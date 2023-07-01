@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #2b2a2a;
 }
 
+body {
+    background-color: rgb(238, 238, 238);
+    
+}
 .app {
     display: flex;
 }
@@ -19,8 +27,10 @@ nav {
     display: flex;
     flex-direction: column;
     box-shadow: 0 1px 2px rgb(214, 214, 214);
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
     padding-bottom: 10px;
+    background-color: rgb(247, 247, 247);
+    color: #3a3a3a;
 }
 
 .informacoes-pessoais {
@@ -44,12 +54,17 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 99.75%;
+    margin-bottom: 1rem;
 }
 
 .publicacoes {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.h1margin{
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 730px) {

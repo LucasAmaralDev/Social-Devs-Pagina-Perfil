@@ -8,9 +8,14 @@
     margin-bottom: 1rem;
     border-radius: 4px;
 }
-.cardAtividade h3, .cardAtividade p {
+.cardAtividade h3 {
     padding: 0 3%;
     font-size: 1.4rem;
+}
+
+.cardAtividade p {
+    font-size: 1rem;
+    padding: 0 3%;
 }
 
 @media (max-width: 767px) {

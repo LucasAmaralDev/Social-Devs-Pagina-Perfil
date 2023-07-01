@@ -8,15 +8,16 @@
     margin-top: 3vh;
     min-height: 150px;
     padding-bottom: 2vh;
-
+    background-color: rgb(247, 247, 247);
+    border-radius: 1rem;
+    color: #3a3a3a;
 }
 
 .cardUser img {
     border-radius: 50%;
     box-shadow: 2px 2px 14px 3px #929090;
     width: 60%;
-
-
+    margin-top: 10px;
 }
 
 

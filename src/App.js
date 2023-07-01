@@ -33,8 +33,11 @@ function App() {
 
       {/* Historico de atividades e publicacoes*/}
       <div className="main-right">
+
+
+        {/* Historico de atividades */}
         <section className="atividades">
-          <h1>Histórico de atividades</h1>
+          <h1 className="h1margin">Histórico de atividades</h1>
           <Atividades atividade="Curtiu a Publicação de Luiz" data="01 de julho" />
           <Atividades atividade="Comentou a Publicação de Regina" data="01 de julho" />
           <Atividades atividade="Salvou a Publicação de Julio" data="30 de junho" />
@@ -45,7 +48,7 @@ function App() {
 
         {/* Publicacoes */}
         <section className="publicacoes">
-          <h1>Publicações</h1>
+          <h1 className="h1margin">Publicações</h1>
           <Publicacao texto="Pai nosso, que estás nos céus!" img={profileImg} username={username} data="01 de Julho" />
           <Publicacao texto="Santificado seja o teu nome." img={profileImg} username={username} data="01 de Julho" />
           <Publicacao texto="Venha o teu Reino" img={profileImg} username={username} data="01 de Julho" />
