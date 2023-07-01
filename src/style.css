@@ -30,7 +30,7 @@ nav {
     border-radius: 0.8rem;
     padding-bottom: 10px;
     background-color: rgb(247, 247, 247);
-    color: #3a3a3a;
+    color: #ffffff !important;
 }
 
 .informacoes-pessoais {

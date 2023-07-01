@@ -1,5 +1,4 @@
 .header {
-    background-color: rgb(231, 207, 198);
     width: 100vw;
     position: fixed;
     display: flex;
@@ -10,20 +9,23 @@
     background-color: #252525;
 }
 
-.header {
+.header h1{
+
     color: #FFF;
 }
 
 .header button {
     display: none;
     background-color: rgb(117, 117, 116);
-    color: #FFF;
+    color: #FFF !important;
 }
 
 
 .container {
     padding: 0 4vh;
 }
+
+
 
 .sidebarmenu {
     padding: 0 4vh;
@@ -34,6 +36,7 @@
 .header ul li {
     list-style: none;
     font-size: 1.3rem;
+    color: #FFF;
 }
 
 
