@@ -12,12 +12,12 @@ export function Publicacao(props) {
                 </div>
                 {/* Data */}
                 <div>
-                    <p>{props.data}</p>
+                    <p className={styles.date}>{props.data}</p>
                 </div>
             </div>
 
             <div className="publicacao-content">
-                <p>{props.texto}</p>
+                <p className={styles.texto}>{props.texto}</p>
             </div>
         </div>
     )

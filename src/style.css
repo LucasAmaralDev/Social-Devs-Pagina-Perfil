@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.app{
+.app {
     display: flex;
 }
 
-.left-bar{
+.left-bar {
     width: 21%;
 }
 
@@ -17,10 +18,12 @@ nav {
     width: 20%;
     display: flex;
     flex-direction: column;
-    border: 2px solid red
+    box-shadow: 0 1px 2px rgb(214, 214, 214);
+    border-radius: 0.6rem;
+    padding-bottom: 10px;
 }
 
-.informacoes-pessoais{
+.informacoes-pessoais {
     margin-top: 6%;
     display: flex;
     flex-direction: column;
@@ -29,23 +32,57 @@ nav {
     gap: 1.8rem;
 }
 
-.main-right{
+.main-right {
     width: 80%;
     margin-top: 5vh;
+    margin-left: 20vw;
 }
 
-.atividades{
+.atividades {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 99.75%;
-    border: 2px solid green;
 }
 
 .publicacoes {
-    border: 2px solid cadetblue;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+@media (max-width: 730px) {
+
+    .app {
+        display: unset;
+    }
+
+    nav {
+        position: unset;
+        padding-top: 5vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: unset;
+    }
+
+    .informacoes-pessoais {
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .main-right {
+        width: 100%;
+        margin-top: 3vh;
+        margin-left: unset;
+    }
+
+    .publicacoes {
+        margin-top: 3vh;
+    }
 }

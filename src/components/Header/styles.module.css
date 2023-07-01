@@ -6,16 +6,29 @@
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-    border:1px solid black;
+    box-shadow: 0 2px 4px rgb(171, 171, 173);
+    background-color: #252525;
 }
 
-.header ul {
-    display: flex;
-    gap: 1.5rem;
+.header {
+    color: #FFF;
 }
+
+.header button {
+    display: none;
+    background-color: rgb(117, 117, 116);
+    color: #FFF;
+}
+
 
 .container {
     padding: 0 4vh;
+}
+
+.sidebarmenu {
+    padding: 0 4vh;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .header ul li {
@@ -23,3 +36,45 @@
     font-size: 1.3rem;
 }
 
+
+
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 1rem;
+        width: 11ch;
+    }
+
+    .container {
+        padding: 0 2vh;
+    }
+
+    .header button {
+        width: 50px;
+        height: 100%;
+        display: block;
+        border: none;
+        padding: 0px;
+        margin: 20px;
+
+
+    }
+
+    .sidebarmenu {
+        visibility: hidden;
+        position: fixed;
+        top: 5vh;
+        left: 0;
+        padding: unset;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        background-color: #5d5c5e;
+        box-sizing: border-box;
+    }
+
+    .sidebarmenu li {
+        margin: 0.5rem 0;
+    }
+}

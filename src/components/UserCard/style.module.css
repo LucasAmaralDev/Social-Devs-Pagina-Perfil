@@ -1,17 +1,32 @@
 .cardUser {
     width: 100%;
-    height: 55vh;
     min-height: 300px;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    
+    gap: 2rem;
+    margin-top: 3vh;
+    min-height: 150px;
+    padding-bottom: 2vh;
+
 }
 
 .cardUser img {
-    height: 65%;
     border-radius: 50%;
     box-shadow: 2px 2px 14px 3px #929090;
+    width: 60%;
+
+
+}
+
+
+
+@media(max-width: 850px) {
+    .cardUser {
+        text-align: center;
+    }
+
+    .cardUser h3 {
+        font-size: 2rem;
+    }
 }

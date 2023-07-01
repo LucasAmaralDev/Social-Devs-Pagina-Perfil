@@ -16,7 +16,7 @@ function App() {
     <div className="app">
       <Header />
       {/* Area de navegação */}
-      <div className="left-bar">
+
         <nav>
 
           {/* Card do usuario */}
@@ -30,7 +30,6 @@ function App() {
           </div>
         </nav>
 
-      </div>
 
       {/* Historico de atividades e publicacoes*/}
       <div className="main-right">

@@ -1,13 +1,21 @@
 .cardAtividade{
-    color: blue;
-    border: 2px solid red;
+    color: rgb(76, 76, 82);
+    background-color: rgb(250, 250, 250);
     width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    border-radius: 4px;
 }
 .cardAtividade h3, .cardAtividade p {
     padding: 0 3%;
     font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+    .cardAtividade h3, .cardAtividade p {
+        padding: 0 1%;
+        font-size: 0.9rem;
+    }
 }
