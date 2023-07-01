@@ -12,23 +12,60 @@ function App() {
   const username = "Lucas Henrique";
   const profileImg = "https://media.licdn.com/dms/image/D4D03AQFewEXNBK_63w/profile-displayphoto-shrink_400_400/0/1686592063966?e=1693440000&v=beta&t=ZdOtDRlAbL95RcNkweped0mh3d1dQiex41ao9n7FHnE"
 
+  const atividades = [
+    { atividade: "Curtiu a Publicação de Luiz", data: "01 de julho" },
+    { atividade: "Comentou a Publicação de Regina", data: "01 de julho" },
+    { atividade: "Salvou a Publicação de Julio", data: "30 de junho" },
+    { atividade: "Alterou a foto de perfil", data: "30 de junho" },
+    { atividade: "Alterou os dados pessoais", data: "30 de junho" },
+    { atividade: "Criou a conta", data: "29 de junho" }
+  ]
+
+  const publicacoes = [
+    { texto: "Sistema Operacional que estais na memória,", data: "01 de julho" },
+    { texto: "Compilado seja o vosso programa", data: "01 de julho" },
+    { texto: "Venha à tela os vossos comandos", data: "01 de julho" },
+    { texto: "Seja executada a nossa rotina", data: "01 de julho" },
+    { texto: "Assim na memória, como na impressora.", data: "01 de julho" },
+    { texto: "Acerto nosso de cada dia, rodai hoje", data: "01 de julho" },
+    { texto: " Informai os nossos erros", data: "01 de julho" },
+    { texto: "Assim como nós informamos o que está corrigido", data: "01 de julho" },
+    { texto: "Não nos deixai entrar em looping", data: "01 de julho" },
+    { texto: "Mas livrai-nos do Dump", data: "01 de julho" },
+    { texto: "Amém", data: "01 de julho" },
+  ]
+
+  const informacoesPessoais = [
+    { title: "Data de Nascimento", description: "24 de outubro de 1997" },
+    { title: "Escolaridade", description: "Ensino Médio Completo" },
+    { title: "Onde Mora", description: "Cuiabá - MT" },
+    { title: "E-mail", description: "lucashsamaral@gmail.com" },
+    { title: "Estado Civil", description: "Casado" },
+  ]
+
+
+
   return (
     <div className="app">
       <Header />
       {/* Area de navegação */}
 
-        <nav>
+      <nav>
 
-          {/* Card do usuario */}
-          <UserCard srcimg={profileImg} name={username} />
+        {/* Card do usuario */}
+        <UserCard srcimg={profileImg} name={username} />
 
-          {/* Informacoes pessoais */}
-          <div className="informacoes-pessoais">
-            <PersonalInfo title="Data de Nascimento" description="24 de outubro de 1997" />
-            <PersonalInfo title="Escolaridade" description="Ensino Médio Completo" />
-            <PersonalInfo title="Onde Mora" description="Cuiabá - MT" />
-          </div>
-        </nav>
+        {/* Informacoes pessoais */}
+        <div className="informacoes-pessoais">
+
+          {
+            informacoesPessoais.map((info) => {
+              return (<PersonalInfo title={info.title} description={info.description} />)
+            }
+            )
+          }
+        </div>
+      </nav>
 
 
       {/* Historico de atividades e publicacoes*/}
@@ -38,29 +75,21 @@ function App() {
         {/* Historico de atividades */}
         <section className="atividades">
           <h1 className="h1margin">Histórico de atividades</h1>
-          <Atividades atividade="Curtiu a Publicação de Luiz" data="01 de julho" />
-          <Atividades atividade="Comentou a Publicação de Regina" data="01 de julho" />
-          <Atividades atividade="Salvou a Publicação de Julio" data="30 de junho" />
-          <Atividades atividade="Alterou a foto de perfil" data="30 de junho" />
-          <Atividades atividade="Alterou os dados pessoais" data="30 de junho" />
-          <Atividades atividade="Criou a conta" data="29 de junho" />
+
+          {atividades.map((atividade) => {
+            return (<Atividades atividade={atividade.atividade} data={atividade.data} />)
+            })
+          }
         </section>
 
         {/* Publicacoes */}
         <section className="publicacoes">
           <h1 className="h1margin">Publicações</h1>
-          <Publicacao texto="Pai nosso, que estás nos céus!" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Santificado seja o teu nome." img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Venha o teu Reino" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Seja feita a tua vontade" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Assim na terra como no céu. " img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Dá-nos hoje o nosso pão de cada dia." img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Perdoa as nossas dívidas" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Assim como perdoamos aos nossos devedores." img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="E não nos deixes cair em tentação" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="mas livra-nos do mal" img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="porque teu é o Reino, o poder e a glória para sempre. Amém." img={profileImg} username={username} data="01 de Julho" />
-          <Publicacao texto="Mateus 6:9-13" img={profileImg} username={username} data="01 de Julho" />
+          {publicacoes.map((publicacao) => {
+            return (<Publicacao texto={publicacao.texto} img={profileImg} username={username} data={publicacao.data} />)
+          }
+          )}
+
 
         </section>
 
