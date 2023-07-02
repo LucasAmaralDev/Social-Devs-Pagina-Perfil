@@ -1,0 +1,60 @@
+.absoluto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute !important;
+    width: 80vw;
+    height: 95vh;
+    top: 5vh;
+    left: 20vw;
+    background-color: rgb(247, 247, 247);
+    z-index: 0 !important;
+}
+
+.absoluto h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: rgb(99, 99, 99);
+}
+
+.absoluto textarea {
+    border: none;
+    font-size: 1.4rem;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgb(219, 218, 219);
+    padding: 10px 2rem;
+}
+
+.absoluto textarea:focus {
+    outline: none;
+}
+
+.absoluto button {
+    margin-top: 3rem !important;
+    display: unset;
+    width: 14rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 8px rgb(68, 44, 44);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(200, 203, 206);
+    color: black !important;
+    font-size: 2rem;
+}
+
+.absoluto button:hover {
+    background-color: rgb(223, 225, 228);
+    transition: 300ms;
+}
+
+.absoluto button:active {
+    outline: none;
+    background-color: rgb(54, 50, 50)!important;
+    color: aliceblue !important;
+}
+

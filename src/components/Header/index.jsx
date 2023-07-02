@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './styles.module.css'
+import { Publicar } from '../Actions/Publicar'
 
 export function Header(props) {
     const [open, setOpen] = useState(true)
@@ -27,10 +28,11 @@ export function Header(props) {
             <button onClick={abrir_menu}>  Menu  </button>
             <ul className={styles.sidebarmenu}>
                 <li>Inicio</li>
-                <li>Noticias</li>
+                <li>Nova Publicação</li>
                 <li>Perfil</li>
                 <li>Sair</li>
             </ul>
+            {/* <Publicar /> */}
         </div>
     )
 }

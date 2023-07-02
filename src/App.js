@@ -4,8 +4,44 @@ import { PersonalInfo } from "./components/PersonalInfo";
 import { Atividades } from "./components/Atividades";
 import { Publicacao } from "./components/Publicacao";
 
+import { useState, useEffect } from "react";
 
 import './style.css'
+
+function Componente() {
+  const [infoList, setInfoList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://35.169.253.30:8080/find-personal-info', {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        setInfoList(data.busca);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar os dados:', error);
+      });
+  }, []);
+
+  return (
+    <div>
+      {infoList.length > 0 ? (
+        infoList.map(info => (
+          <PersonalInfo
+            title={info.title}
+            description={info.description}
+          />
+        ))
+      ) : (
+        <p>Carregando...</p>
+      )}
+    </div>
+  );
+}
 
 
 function App() {
@@ -45,6 +81,9 @@ function App() {
 
 
 
+
+
+
   return (
     <div className="app">
       <Header />
@@ -58,12 +97,7 @@ function App() {
         {/* Informacoes pessoais */}
         <div className="informacoes-pessoais">
 
-          {
-            informacoesPessoais.map((info) => {
-              return (<PersonalInfo title={info.title} description={info.description} />)
-            }
-            )
-          }
+          <Componente />
         </div>
       </nav>
 
@@ -78,7 +112,7 @@ function App() {
 
           {atividades.map((atividade) => {
             return (<Atividades atividade={atividade.atividade} data={atividade.data} />)
-            })
+          })
           }
         </section>
 
