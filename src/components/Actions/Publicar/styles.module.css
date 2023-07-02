@@ -9,6 +9,7 @@
     left: 20vw;
     background-color: rgb(247, 247, 247);
     z-index: 0 !important;
+    border-radius: 0.8rem;
 }
 
 .absoluto h3 {

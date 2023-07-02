@@ -3,7 +3,9 @@ import styles from './styles.module.css'
 import { Publicar } from '../Actions/Publicar'
 
 export function Header(props) {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
+
+    const [menupublicar, setMenupublicar] = useState(false)
 
     function abrir_menu() {
         if (open === false) {
@@ -20,6 +22,16 @@ export function Header(props) {
 
     }
 
+    function gerir_publicar() {
+        if (menupublicar === false) {
+            setMenupublicar(true)
+            return
+        }
+        setMenupublicar(false)
+    }
+
+
+
     return (
         <div className={styles.header}>
             <div className={styles.container}>
@@ -28,11 +40,12 @@ export function Header(props) {
             <button onClick={abrir_menu}>  Menu  </button>
             <ul className={styles.sidebarmenu}>
                 <li>Inicio</li>
-                <li>Nova Publicação</li>
+                <li onClick={gerir_publicar}>Nova Publicação</li>
                 <li>Perfil</li>
                 <li>Sair</li>
             </ul>
-            {/* <Publicar /> */}
+            {menupublicar ? <Publicar /> : null}
+            
         </div>
     )
 }

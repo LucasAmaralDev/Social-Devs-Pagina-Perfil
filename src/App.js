@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 
 import './style.css'
 
-function Componente() {
+function CarregarInformacoesPessoais() {
   const [infoList, setInfoList] = useState([]);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Componente() {
   }, []);
 
   return (
-    <div>
+    <div className="informacoes-pessoais">
       {infoList.length > 0 ? (
         infoList.map(info => (
           <PersonalInfo
@@ -43,10 +43,50 @@ function Componente() {
   );
 }
 
+function CarregarInformacoesPosts() {
+  const [stateLoadPost, setStateLoadPost] = useState([]);
+  const profileImg = localStorage.getItem('profileImg');
+  const username = localStorage.getItem('username');
+
+  useEffect(() => {
+    fetch('http://35.169.253.30:8080/load-posts', {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        setStateLoadPost(data);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar os dados:', error);
+      });
+  }, []);
+
+  return (
+    <div className="cardpublicacao">
+      {stateLoadPost.length > 0 ? (
+        stateLoadPost.map(info => (
+          <Publicacao texto={info.description} img={profileImg} username={username} data={info.date} />
+        ))
+      ) : (
+        <p>Carregando...</p>
+      )}
+    </div>
+  );
+}
+
+
 
 function App() {
   const username = "Lucas Henrique";
   const profileImg = "https://media.licdn.com/dms/image/D4D03AQFewEXNBK_63w/profile-displayphoto-shrink_400_400/0/1686592063966?e=1693440000&v=beta&t=ZdOtDRlAbL95RcNkweped0mh3d1dQiex41ao9n7FHnE"
+
+  localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1Y2FzIEhlbnJpcXVlIiwiaWQiOjEsImlhdCI6MTY4ODM0MDAzMywiZXhwIjo0ODQ0MTAwMDMzfQ.Ca7seiXMt8KeK2kEwaiWxH_WrKMdUhcQi8k4ShcTTms");
+  localStorage.setItem('username', username);
+  localStorage.setItem('profileImg', profileImg);
+
 
   const atividades = [
     { atividade: "Curtiu a Publicação de Luiz", data: "01 de julho" },
@@ -94,11 +134,10 @@ function App() {
         {/* Card do usuario */}
         <UserCard srcimg={profileImg} name={username} />
 
-        {/* Informacoes pessoais */}
-        <div className="informacoes-pessoais">
 
-          <Componente />
-        </div>
+
+        <CarregarInformacoesPessoais loadimg={profileImg} loaduser={username} />
+
       </nav>
 
 
@@ -118,11 +157,9 @@ function App() {
 
         {/* Publicacoes */}
         <section className="publicacoes">
-          <h1 className="h1margin">Publicações</h1>
-          {publicacoes.map((publicacao) => {
-            return (<Publicacao texto={publicacao.texto} img={profileImg} username={username} data={publicacao.data} />)
-          }
-          )}
+          <CarregarInformacoesPosts />
+
+
 
 
         </section>
