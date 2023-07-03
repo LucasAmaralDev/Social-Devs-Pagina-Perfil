@@ -59,3 +59,39 @@
     color: aliceblue !important;
 }
 
+@media (max-width: 767px) {
+
+    .absoluto {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute !important;
+        width: 100vw;
+        height: 95vh;
+        top: 5vh;
+        left: 0;
+        background-color: rgb(247, 247, 247);
+        z-index: unset;
+        border-radius: 0.8rem;
+        text-align: center;
+    }
+
+    .absoluto textarea {
+        border: none;
+        font-size: 1.1rem;
+        width: 88vw;
+        height: 52vh;
+        border-radius: 2rem;
+        box-shadow: 0 2px 8px rgb(219, 218, 219);
+        padding: 10px 2rem;
+        text-align: center;
+    }
+
+    .absoluto h3 {
+        margin-top: 1rem;
+        margin-bottom: 2.2rem;
+        font-size: 2rem;
+        color: rgb(99, 99, 99);
+    }
+
+}
