@@ -81,7 +81,7 @@ function CarregarInformacoesPosts() {
 
 function App() {
   const username = "Lucas Henrique";
-  const profileImg = "https://media.licdn.com/dms/image/D4D03AQFewEXNBK_63w/profile-displayphoto-shrink_400_400/0/1686592063966?e=1693440000&v=beta&t=ZdOtDRlAbL95RcNkweped0mh3d1dQiex41ao9n7FHnE"
+  const profileImg = "https://media.licdn.com/dms/image/D4D03AQFyy-sWNkV0bQ/profile-displayphoto-shrink_800_800/0/1689304541000?e=1695254400&v=beta&t=2kOgjlCypKSDKjLSe3Bq8H10RkleY_eQ0ibI-wLPaEI"
 
   localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1Y2FzIEhlbnJpcXVlIiwiaWQiOjEsImlhdCI6MTY4ODM0MDAzMywiZXhwIjo0ODQ0MTAwMDMzfQ.Ca7seiXMt8KeK2kEwaiWxH_WrKMdUhcQi8k4ShcTTms");
   localStorage.setItem('username', username);
@@ -95,28 +95,6 @@ function App() {
     { atividade: "Alterou a foto de perfil", data: "30 de junho" },
     { atividade: "Alterou os dados pessoais", data: "30 de junho" },
     { atividade: "Criou a conta", data: "29 de junho" }
-  ]
-
-  const publicacoes = [
-    { texto: "Sistema Operacional que estais na memória,", data: "01 de julho" },
-    { texto: "Compilado seja o vosso programa", data: "01 de julho" },
-    { texto: "Venha à tela os vossos comandos", data: "01 de julho" },
-    { texto: "Seja executada a nossa rotina", data: "01 de julho" },
-    { texto: "Assim na memória, como na impressora.", data: "01 de julho" },
-    { texto: "Acerto nosso de cada dia, rodai hoje", data: "01 de julho" },
-    { texto: " Informai os nossos erros", data: "01 de julho" },
-    { texto: "Assim como nós informamos o que está corrigido", data: "01 de julho" },
-    { texto: "Não nos deixai entrar em looping", data: "01 de julho" },
-    { texto: "Mas livrai-nos do Dump", data: "01 de julho" },
-    { texto: "Amém", data: "01 de julho" },
-  ]
-
-  const informacoesPessoais = [
-    { title: "Data de Nascimento", description: "24 de outubro de 1997" },
-    { title: "Escolaridade", description: "Ensino Médio Completo" },
-    { title: "Onde Mora", description: "Cuiabá - MT" },
-    { title: "E-mail", description: "lucashsamaral@gmail.com" },
-    { title: "Estado Civil", description: "Casado" },
   ]
 
 
@@ -157,6 +135,7 @@ function App() {
 
         {/* Publicacoes */}
         <section className="publicacoes">
+        <h1 className="h1margin">Publicações</h1>
           <CarregarInformacoesPosts />
 
 
